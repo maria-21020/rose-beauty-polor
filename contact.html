@@ -1,0 +1,163 @@
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <style>
+        body {
+            font-family: 'baloo bhai', cursive;
+            margin: 0;
+            padding: 0;
+            background-image: url('ba.jpg');
+            background-repeat: repeat;
+            background-size: cover;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-color: #e4717a; /* Dark Pink */
+            padding: 20px;
+            text-align: center;
+            color: #fff;
+            font-size: 1.0rem;
+            display: flex;
+            align-items: center;
+        }
+
+        header img {
+            margin-right: 10px;
+        }
+
+        .container {
+            max-width: 400px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: white;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+        }
+
+        label {
+            font-weight: bold;
+        }
+
+        textarea {
+            width: 100%;
+            padding: 10px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            resize: vertical;
+        }
+
+        button {
+            margin-top: 10px;
+            padding: 10px 20px;
+            background-color: #e4717a; /* Pink */
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #d15565; /* Darker Pink on hover */
+        }
+
+        .contact-info {
+            margin-top: 20px;
+        }
+
+        .contact-info p {
+            margin: 5px 0;
+        }
+
+        a {
+            color: #e4717a; /* Pink */
+        }
+
+        a:hover {
+            color: #d15565; /* Darker Pink on hover */
+        }
+
+        footer {
+            background-color: #e4717a; /* Dark Pink */
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="home.html"><img src="logo.jpg" alt="Beauty Parlor Logo" width="100" height="100"></a>&nbsp&nbsp&nbsp&nbsp&nbsp
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+       <h1>Contact us</h>
+    </header>
+
+    <div class="container">
+        <form action="home.html" method="post">
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+
+            <button type="button" onclick="submitMessage()">Submit</button>
+        </form>
+
+        <div class="contact-info">
+            <p>For urgent matters, contact us via:</p>
+            <p>WhatsApp: <a href="https://wa.me/03026106445" target="_blank">+923026106445</a></p>
+            <p>Email: <a href="mailto:engr.maria.rasheed@gmail.com">engr.maria.rasheed@gmail.com</a></p>
+            <p>Web: <a href="http://www.rosebeautysalon.com" target="_blank">www.rosebeautysalon.com</a></p>
+
+            <h3>FOLLOW US</h3>
+            <a href="http://www.instagram.com/maraa_choudhry"><img src="insta.jpg" width="30" height="30" alt="instagram"></a>
+            <a href="http://www.facebook.com/hadia_rashid"><img src="fb.png" width="30" height="30" alt="instagram"></a>
+            <a href="http://www.twitter.com/maraa_choudhry"><img src="twitter.png" width="30" height="30" alt="instagram"></a>
+
+
+            <div class="footer-title">
+                <h3>SUBSCRIBE</h3>
+              </div>
+              
+              <div class="subscribe-style">
+                
+                <p>Get E-mail updates about our latest shop and special offers.</p>
+                
+                <div class="subscribe-form"><form method="post" action="/contact#Contact_footer" id="Contact_footer" accept-charset="UTF-8" class="contact-form"><input type="hidden" name="form_type" value="customer"><input type="hidden" name="utf8" value="✓"><div class="popup-subscribe-form validate newsletter-form">
+          <div id="mc_embed_signup_scroll" class="mc-form">
+            <div class="mc-form subscribe-form">
+              <input class="input_text" type="hidden" name="contact[tags]" value="newsletter">
+              <input class="input_text" type="email" name="contact[email]" id="Email" value="" placeholder="email@example.com" aria-label="email@example.com" autocorrect="off" autocapitalize="off">
+              <div class="clear">
+                <input type="submit" class="button" name="commit" id="Subscribe" value="Subscribe">
+              </div>
+            </div>
+          </div>
+        </div></form></div>
+              </div>
+        </div>
+    </div>
+
+
+
+    <script>
+        function submitMessage() {
+            // You can add your message submission logic here
+            var message = document.getElementById("message").value;
+            alert('Message submitted:\n\n' + message);
+            document.getElementById("message").value = "";
+        }
+    </script>
+
+    <footer>
+        &copy; 2024 Beauty Parlor. All rights reserved.
+    </footer>
+</body>
+</html>
