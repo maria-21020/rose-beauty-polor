@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Salon Website</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'baloo bhai',cursive;
+            display: flex;
+        }
+
+        #left-frame {
+            width: 20%;
+            height: 100vh;
+            background-color: white;
+            color: #333;
+            padding: 20px;
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        #logo-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        #logo {
+            margin-right: 10px;
+        }
+
+        #navigation {
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            background-color: white;
+            padding: 10px;
+            border-radius: 10px;
+        }
+
+        #navigation a {
+            color: #ff66b2;
+            text-decoration: none;
+            padding: 8px;
+            margin: 5px 0;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        #navigation a:hover {
+            background-color: #ff66b2;
+            color: white;
+        }
+
+        #search-bar {
+            margin-top: 20px;
+        }
+
+        #app-icons {
+            margin-top: 20px;
+            display: flex;
+            gap: 10px;
+        }
+
+        #right-frame {
+            flex-grow: 1;
+            height: 100vh;
+            padding: 20px;
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+        }
+
+        #slideshow {
+            height: 80%;
+            overflow: hidden;
+            position: relative;
+        }
+
+        #slideshow img {
+            width: 90%;
+            height: 100%;
+            object-fit: cover;
+            position: absolute;
+            transition: opacity 0.5s;
+        }
+
+        #sections {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 20px;
+        }
+
+        .section {
+            width: 20%;
+            height: 100px;
+            background-color: white;
+            border-radius: 5px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            padding: 5px;
+            position: relative;
+        }
+
+        .section h3 {
+            color: #000;
+            font-weight: bold;
+            font-size: 18px; /* Adjust the size as needed */
+            margin-top: 0;
+        }
+
+        .section img {
+            width: 30px; /* Adjust the size as needed */
+            height: 40px; /* Adjust the size as needed */
+            object-fit: cover;
+            position: absolute;
+            top: 10px;
+            right: 10px;
+        }
+
+        .section p {
+            color: #333;
+            font-size: 14px; /* Adjust the size as needed */
+        }
+    </style>
+</head>
+<body>
+    <div id="left-frame">
+        <div id="logo-container">
+            <img width="80" height="80" id="logo" alt="My Salon Logo" src="logo.jpg">
+            <h3><b>Rose Beauty Salon</b></h3>
+        </div>
+        
+        <div id="navigation">
+            <a href="login.html">Login</a>
+            <a href="services.html">Services</a>
+            <a href="rosemakeup.html">Makeup_services</a>
+            <a href="appointment.html">Appointment_booking</a>
+            <a href="contact.html">Contact us</a>
+            
+        </div>
+
+        <div id="search-bar">
+            <input id="searchInput" oninput="filterSections()" type="text" placeholder="Search...">
+        </div>
+
+        <div id="app-icons">
+            <!-- <a href="instagram.com/itx.zehniye/"><img width="40" height="40" alt="Instagram" src="insta.jpg"></a> -->
+        <div>
+            <a href ="http://www.instagram.com/miraal_choudhry32/">
+                <img src="insta.jpg" alt="Instagram" width="30" height="30"></a>
+        </div>
+                <a href ="http://wa.me/03026106445">
+                    <img src="wa.png" alt="Iwhatsapp" width="30" height="30"></a>
+    
+                    <a href ="http://www.facebook.com/hadia_rashid">
+                        <img src="fb.png" alt="fb" width="30" height="30"></a>
+    
+                        <a href ="http://twitter.com/miraal_choudhry32/">
+                            <img src="twitter.png" alt="twitter" width="30" height="30"></a>
+            <!-- <img width="40" height="40" alt="Facebook" src="fb.png">
+            <img width="40" height="40" alt="Twitter" src="twitter.png"> -->
+        </div>
+    </div>
+
+    <div id="right-frame">
+        <div id="slideshow">
+            <img style="opacity: 1;" alt="Slide 1" src="e.jpg">
+            <img style="opacity: 0;" alt="Slide 2" src="dis.jpg">
+            <img style="opacity: 0;" alt="Slide 3" src="br3.jpg">
+            <img style="opacity: 0;" alt="Slide 4" src="br.jpg">
+            <img style="opacity: 0;" alt="Slide 5" src="l.jpg">
+        </div>
+
+        <div id="sections">
+            <div class="section">
+                <img alt="Facial Icon" src="fa.jpg"><br>
+                <p><b>Facial</b><br><br>
+                Discover Your Radiance: Transform with our Facial Services for a Refreshed and Glowing You.</p>
+            </div>
+            <div class="section">
+                <img alt="Spa Icon" src="mp.jpg"><br>
+                <p><b>Padicure manicure</b><br><br>
+                Discover Your Radiance: Transform with our Spa Services for a Refreshed and Glowing You.</p>
+            </div>
+            <div class="section">
+                <img alt="Haircut Icon" src="hair.jpg"><br>
+                <p><b>Haircut
+
+</b><br><br>
+                Discover Your Radiance: Transform with our Haircut Services for a Refreshed and Glowing You.</p>
+            </div>
+        </div>
+
+        <!-- Content of the right frame goes here -->
+        
+    </div>
+
+    <script>
+        // JavaScript for the slideshow
+        const slideshow = document.getElementById('slideshow');
+        const images = slideshow.getElementsByTagName('img');
+        let currentSlide = 0;
+
+        function showSlide(index) {
+            for (let i = 0; i < images.length; i++) {
+                images[i].style.opacity = i === index ? 1 : 0;
+            }
+        }
+
+        function nextSlide() {
+            currentSlide = (currentSlide + 1) % images.length;
+            showSlide(currentSlide);
+        }
+
+        // Change slide every 3 seconds
+        setInterval(nextSlide, 3000);
+
+        // Show the initial slide
+        showSlide(currentSlide);
+
+        // JavaScript for the search bar
+        function filterSections() {
+            const input = document.getElementById('searchInput').value.toLowerCase();
+            const sections = document.querySelectorAll('.section');
+            
+            sections.forEach(section => {
+                const text = section.textContent.toLowerCase();
+                section.style.display = text.includes(input) ? 'flex' : 'none';
+            });
+        }
+    </script>
+
+
+</body>
+</html>
